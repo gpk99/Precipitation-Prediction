@@ -1,4 +1,4 @@
-## Rainfall Prediction & Climate Change Analysis: Time Series Segmentation
+## Rainfall Prediction and climate change analysis
 
 This repository contains the code and results of a research project focused on predicting precipitation and analyzing climate change dynamics using time series segmentation techniques. The study was specifically conducted in Marion County, KY, leveraging NASA'sdataset for high-resolution climate data analysis.
 
