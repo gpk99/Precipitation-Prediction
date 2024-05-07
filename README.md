@@ -16,22 +16,29 @@ Rainfall prediction is crucial for disaster management and resource planning, ye
 - There are a few corrupt samples that are too large for the data which was validated from the web and removed. NA's are replaced with data from previous samples if more than three continuous samples are NA's data from previous year is considered.
 
 ### Key Methodologies:
-- **Time Series Segmentation Algorithms:** Employed unsupervised algorithms (e.g., Hidden Markov Model, ClaSP, BinSeg) to identify changes and breakpoints in precipitation patterns over time.
-- **Multivariate Analysis:** Considered multiple variables (humidity, temperature, soil moisture, wind speed, air pressure) to understand their influence on precipitation.
+<img src="Blank diagram.png">
+
+
+- **Precipitation Prediction:**  This problem is approached from both regression and classification angles initial approach was Regression but the regression models performance was very low so it was converted to a classification problem which gave better results
+- **Time Series Segmentation Algorithms:** Employed unsupervised algorithms (Prophet, ClaSP) to identify changes and breakpoints in precipitation patterns over time.
+- **Time Series Forecasting:** Even though model performance has improved with classification it necessary to have models that can predict seasonality so monthly forcasting models are built
+- **Seasonal Models:** To improve the classification efficiency i have split the model into summer and winter which has improved the classification performance 
 
 ### Findings:
-- **Improved Prediction Accuracy:** Implemented segmentation techniques enhanced precipitation prediction models, surpassing traditional statistical methods.
+- **Improved Prediction Accuracy:** Spliting model techniques enhanced precipitation prediction models, surpassing traditional statistical methods.
 - **Localized Climate Insights:** Revealed how climate change has affected precipitation variability within Marion County.
 
-### Project Impact:
-- **Bridge Resource Gap:** Potentially improves weather forecasting capabilities in resource-limited regions.
-- **Inform Disaster Management:** Provides actionable insights for disaster preparedness and water resource management in underdeveloped areas.
+### Results
+- **Regression:** Performace is below average(Random Forest)
+- **Classification:** When compared to regression the performance has significantly improved(XGB)
+- **Seasonal Models:** By splitting annual  models into seasonal models there is some improvement in performance(XGB)
+- **Monthly Forcast:** The model has MAE of 26 (FB Prophet)
 
 ### Repository Structure:
 1. **Code:** Contains scripts for data preprocessing, segmentation algorithms, and model development.
-2. **Data:** Includes datasets used for analysis (IMERG data, meteorological variables).
+2. **Data:** Includes datasets used for analysis (data, meteorological variables).
 3. **Results:** Provides detailed outcomes of segmentation, model comparisons, and climate change impact analysis.
-4. **Documentation:** Supplementary materials, including project overview, methodologies, and findings.
+
 
 ### Conclusion:
 This research contributes to advancing precipitation prediction and climate change analysis at a local scale. By combining advanced modeling techniques with in-depth data segmentation, the study sheds light on climate dynamics and resilience-building strategies in Marion County and similar regions.
